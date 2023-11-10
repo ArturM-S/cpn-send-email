@@ -7,22 +7,19 @@ const port = 3000;
 
 app.use(bodyParser.urlencoded({ extended: false })); // Parse form data
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
 
 app.post('/send-email', (req, res) => {
   let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'silvamarquesartur@gmail.com',
-      pass: 'opmy neyd ibws czyg'
+      user: 'cpnprotecao@gmail.com',
+      pass: 'euvf faez jltm uzah'
     }
   });
 
   const mailOptions = {
-    from: "silvamarquesartur@gmail.com",
-    to: "silvamarquesartur@gmail.com",
+    from: "cpnprotecao@gmail.com",
+    to: "cpnprotecao@gmail.com",
     subject: "Nova mensagem do site",
     text: "Nome: " + req.body.name + "\n" +
           "Email: " + req.body.email + "\n" +
